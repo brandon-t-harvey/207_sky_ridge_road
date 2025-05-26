@@ -11,11 +11,15 @@
     .gallery img { width: 100%; height: auto; border-radius: 4px; }
     .info { background: #f9f9f9; padding: 15px; border-radius: 4px; margin: 20px 0; }
     form { display: grid; gap: 10px; }
-    form input, form textarea, form button {
-      width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;
-      font-size: 1rem;
-    }
-    form button { background: #0078ff; color: white; border: none; cursor: pointer; }
+    form input, form textarea, form button, form label, form span { font-size: 1rem; }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    .radio-group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .radio-group span { margin-right: 8px; }
+    .radio-group label { display: flex; align-items: center; margin-right: 16px; }
+    .radio-group label input[type="radio"] { margin: 0 6px 0 0; vertical-align: middle; }
+    form button { width: 100%; padding: 10px; background: #0078ff; color: white; border: none; border-radius: 4px; cursor: pointer; }
     form button:hover { background: #005bb5; }
   </style>
 </head>
