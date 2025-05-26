@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>207 Sky Ridge Road High View, WV 26808</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .gallery img { width: 100%; height: auto; border-radius: 4px; }
+    .info { background: #f9f9f9; padding: 15px; border-radius: 4px; margin: 20px 0; }
+    form { display: grid; gap: 10px; }
+    form input, form textarea, form button {
+      width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;
+      font-size: 1rem;
+    }
+    form button { background: #0078ff; color: white; border: none; cursor: pointer; }
+    form button:hover { background: #005bb5; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Image Gallery</h1>
+    <h4>Updated: 05/15/2025</h4>
+    <!-- Image Gallery -->
+    <section class="gallery">
+      <img src="https://via.placeholder.com/600x400?text=Living+Room" alt="Living Room" />
+    </section>
+
+    <!-- Information Block -->
+    <section class="info">
+      <h2>Property Details</h2>
+      <p><strong>Location:</strong> 207 Sky Ridge Rd. High View, WV 26808</p>
+      <p><strong>Price:</strong> $475,000</p>
+      <p><strong>Beds / Baths:</strong> 3 / 2</p>
+      <p><strong>Square Footage:</strong> 2,900 sq ft</p>
+      <p>Description here</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section>
+      <h2>Contact Us</h2>
+      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script>
+  (function(){
+	  emailjs.init({
+		publicKey: 'Llr_Y_5-7cjSMs1qK',
+		  blockHeadless: true,
+		  limitRate: {
+			  id: 'app',
+			  throttle: 10000,
+		  },
+	  });  // from dashboard
+  })();
+</script>
+
+<form id="contact-form">
+  <input type="text" name="from_name" placeholder="Your Name"   required>
+  <input type="email" name="reply_to"  placeholder="Your Email"  required>
+  <textarea name="message" rows="5"  placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  emailjs.sendForm('service_95spi05','template_smazot9', this)
+    .then(() => alert('Message sent!'), (err) => alert('Oops… ' + JSON.stringify(err)));
+});
+</script>
+    </section>
+  </div>
+
+  <!-- Script to load images from the "images" folder -->
+  <script>
+    const imageDir = 'images';
+    const fileNames = [
+      // List your image files here, e.g. 'living_room.jpg', 'kitchen_view.png'
+      'living_room.jpg',
+      'kitchen.jpg',
+      'backyard.jpg',
+      'master_bedroom.jpg'
+    ];
+    const gallery = document.querySelector('.gallery');
+    fileNames.forEach(file => {
+      const img = document.createElement('img');
+      img.src = `${imageDir}/${file}`;
+      img.alt = file.replace(/_/g, ' ').replace(/\.[^/.]+$/, '');
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>
