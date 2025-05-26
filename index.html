@@ -85,17 +85,20 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
   <!-- Script to load images from the "images" folder -->
   <script>
-    const imageDir = 'images';
-    const fileNames = [
-      // List your image files here, e.g. 'living_room.jpg', 'kitchen_view.png'
-      'home_back_yard_view.jpg'
-    ];
-    const gallery = document.querySelector('.gallery');
-    fileNames.forEach(file => {
-      const img = document.createElement('img');
-      img.src = `${imageDir}/${file}`;
-      img.alt = file.replace(/_/g, ' ').replace(/\.[^/.]+$/, '');
-      gallery.appendChild(img);
+    document.addEventListener('DOMContentLoaded', () => {
+      const imageDir = './images';
+      // List your image files here, matching actual names in the images/ folder
+      const fileNames = [
+        'master_bedroom.jpg'
+      ];
+      const gallery = document.querySelector('.gallery');
+      fileNames.forEach(file => {
+        const img = document.createElement('img');
+        img.src = `${imageDir}/${file}`;
+        img.alt = file.replace(/_/g, ' ').replace(/\.[^/.]+$/, '');
+        img.onerror = () => console.warn(`Image not found: ${img.src}`);
+        gallery.appendChild(img);
+      });
     });
   </script>
 </body>
