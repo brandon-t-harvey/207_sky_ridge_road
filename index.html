@@ -40,17 +40,19 @@
     <!-- Contact Form -->
     <section>
       <h2>Contact Us</h2>
-      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-<script>
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
   (function(){
 	  emailjs.init({
-		publicKey: 'Aa9SYAQ9PsPG_gJFg',
+		publicKey: "Aa9SYAQ9PsPG_gJFg",
 		  blockHeadless: true,
 		  limitRate: {
 			  id: 'app',
 			  throttle: 10000,
 		  },
-	  });  // from dashboard
+	  });
   })();
 </script>
 
