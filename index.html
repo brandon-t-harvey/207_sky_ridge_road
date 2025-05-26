@@ -25,12 +25,6 @@
 </head>
 <body>
   <div class="container">
-    <h1>Image Gallery</h1>
-    <h4>Updated: 05/15/2025</h4>
-    <!-- Image Gallery -->
-    <section class="gallery">
-    </section>
-
     <!-- Information Block -->
     <section class="info">
       <h2>Property Details</h2>
@@ -87,6 +81,12 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 });
 </script>
     </section>
+
+	<h1>Image Gallery</h1>
+    <h4>Updated: 05/15/2025</h4>
+    <!-- Image Gallery -->
+    <section class="gallery">
+    </section>
   </div>
 
   <!-- Script to load images from the "images" folder -->
@@ -95,7 +95,33 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       const imageDir = './images';
       // List your image files here, matching actual names in the images/ folder
       const fileNames = [
-        'master_bedroom.jpeg'
+	      'home_back_yard_view.jpeg',
+	      'back_yard.jpeg',
+	      'deck_view_one.jpeg',
+	      'deck_view_two.jpeg',
+	      'garden_one.jpeg',
+	      'garden_two.jpeg',
+	      'driveway.jpeg',
+	      'side_of_driveway.jpeg',
+	      'front_door_walkway.jpeg',
+	      'front_entrance.jpeg',
+	      'house_view_from_front_yard.jpeg',
+	      'theater_room.jpeg',
+	      'side_door_entryway.jpeg',
+	      'bar_from_kitchen_entrance.jpeg',
+	      'room_next_to_kitchen.jpeg',
+	      'kitchen.jpeg',
+	      'dining_room.jpeg',
+	      'spare_room.jpeg',
+	      'living_room.jpeg',
+	      'living_room_hallway.jpeg',
+	      'bedroom_hallway.jpeg',
+	      'second_bathroom.jpeg',
+	      'second_bedroom.jpeg',
+	      'third_bedroom.jpeg',
+	      'master_bedroom.jpeg',
+	      'master_bathroom.jpeg',
+	      'master_bathroom_tub.jpeg'
       ];
       const gallery = document.querySelector('.gallery');
       fileNames.forEach(file => {
